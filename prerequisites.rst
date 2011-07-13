@@ -5,7 +5,7 @@ The main course prerequisite is installimg Pyramid itself. Here is a guide
 to do so, taken directly from the pyramid docs. If you come with this
 installed on tutorial day, we'll be ready to get rolling in no time.
 
-Note that there are diqus comments enabled on this page. If you find any
+Note that there are disqus comments enabled on this page. If you find any
 problems setting up Pyramid, feel free to post a comment here and I will do
 my best to get you up and running.
 
