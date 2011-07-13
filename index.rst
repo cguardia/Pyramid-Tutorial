@@ -3,13 +3,29 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Pyramid Tutorial's documentation!
-============================================
+Welcome to the Pyramid Tutorial
+===============================
+
+The complete notes and code for the tutorial will appear on this site on
+the day of the tutorial. For now, please read the requirements section and
+try to prepare your tutorial computer to avoid losing time setting up the
+day of the tutorial.
+
+Please answer the survey
+------------------------
+
+Three hours is a short time for a tutorial. To take maximum advantage of
+the available time, please help me by filling up the survey at the 
+bottom of this page. This will allow me to tailor the content to better
+suit your needs and expectations.
+
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
+
+   prerequisites.rst
 
 Indices and tables
 ==================
