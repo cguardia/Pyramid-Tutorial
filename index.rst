@@ -8,8 +8,8 @@ Welcome to the Pyramid Tutorial
 
 The complete notes and code for the tutorial will appear on this site on
 the day of the tutorial. For now, please read the requirements section and
-try to prepare your tutorial computer to avoid losing time setting up the
-day of the tutorial.
+try to prepare your tutorial computer to avoid losing time setting up that
+day.
 
 Please answer the survey
 ------------------------

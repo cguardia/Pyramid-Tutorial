@@ -13,19 +13,19 @@ Before You Install
 ------------------
 
 You will need `Python <http://python.org>`_ version 2.5 or better to
-run :app:`Pyramid`.  
+run `Pyramid`.  
 
 .. sidebar:: Python Versions
 
-    As of this writing, :app:`Pyramid` has been tested under Python 2.5.5 and
-    Python 2.6.6, and Python 2.7.2.  :app:`Pyramid` does not run under any
+    As of this writing, `Pyramid` has been tested under Python 2.5.5 and
+    Python 2.6.6, and Python 2.7.2.  `Pyramid` does not run under any
     version of Python before 2.5, and does not yet run under Python 3.X.
 
-:app:`Pyramid` is known to run on all popular Unix-like systems such as
+`Pyramid` is known to run on all popular Unix-like systems such as
 Linux, MacOS X, and FreeBSD as well as on Windows platforms.  It is also
-known to run on Google's App Engine, :term:`PyPy`, and :term:`Jython`.
+known to run on Google's App Engine, `PyPy`, and `Jython`.
 
-:app:`Pyramid` installation does not require the compilation of any
+`Pyramid` installation does not require the compilation of any
 C code, so you need only a Python interpreter that meets the
 requirements mentioned.
 
@@ -60,7 +60,7 @@ Source Compile Method
 
 It's useful to use a Python interpreter that *isn't* the "system"
 Python interpreter to develop your software.  The authors of
-:app:`Pyramid` tend not to use the system Python for development
+`Pyramid` tend not to use the system Python for development
 purposes; always a self-compiled one.  Compiling Python is usually
 easy, and often the "system" Python is compiled with options that
 aren't optimal for web development.
@@ -120,25 +120,22 @@ extensions <http://sourceforge.net/projects/pywin32/files/>`_.
    and add that directory to the end of the ``Path`` environment
    variable.
 
-.. index::
-   single: installing on UNIX
-
 .. _installing_unix:
 
-Installing :app:`Pyramid` on a UNIX System
+Installing `Pyramid` on a UNIX System
 ---------------------------------------------
 
-It is best practice to install :app:`Pyramid` into a "virtual"
+It is best practice to install `Pyramid` into a "virtual"
 Python environment in order to obtain isolation from any "system"
 packages you've got installed in your Python version.  This can be
-done by using the :term:`virtualenv` package.  Using a virtualenv will
-also prevent :app:`Pyramid` from globally installing versions of
+done by using the `virtualenv` package.  Using a virtualenv will
+also prevent `Pyramid` from globally installing versions of
 packages that are not compatible with your system Python.
 
-To set up a virtualenv in which to install :app:`Pyramid`, first
-ensure that :term:`setuptools` is installed.  Invoke ``import
+To set up a virtualenv in which to install `Pyramid`, first
+ensure that `setuptools` is installed.  Invoke ``import
 setuptools`` within the Python interpreter you'd like to run
-:app:`Pyramid` under:
+`Pyramid` under:
 
 .. code-block:: text
 
@@ -182,14 +179,11 @@ the script.  To remediate this, you may need to do:
 
    $ sudo python ez_setup.py
 
-.. index::
-   single: virtualenv
-
 Installing the ``virtualenv`` Package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you've got setuptools installed, you should install the
-:term:`virtualenv` package.  To install the :term:`virtualenv` package
+`virtualenv` package.  To install the `virtualenv` package
 into your setuptools-enabled Python interpreter, use the
 ``easy_install`` command.
 
@@ -205,13 +199,10 @@ to install it as your system's administrative user.  For example:
 
    $ sudo easy_install virtualenv
 
-.. index::
-   single: virtualenv
-
 Creating the Virtual Python Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once the :term:`virtualenv` package is installed in your Python, you
+Once the `virtualenv` package is installed in your Python, you
 can then create a virtual environment.  To do so, invoke the
 following:
 
@@ -224,8 +215,8 @@ following:
 .. warning:: Using ``--no-site-packages`` when generating your
    virtualenv is *very important*. This flag provides the necessary
    isolation for running the set of packages required by
-   :app:`Pyramid`.  If you do not specify ``--no-site-packages``,
-   it's possible that :app:`Pyramid` will not install properly into
+   `Pyramid`.  If you do not specify ``--no-site-packages``,
+   it's possible that `Pyramid` will not install properly into
    the virtualenv, or, even if it does, may not run properly,
    depending on the packages you've already got installed into your
    Python's "main" site-packages dir.
@@ -237,11 +228,11 @@ following:
 You should perform any following commands that mention a "bin"
 directory from within the ``env`` virtualenv dir.
 
-Installing :app:`Pyramid` Into the Virtual Python Environment
+Installing `Pyramid` Into the Virtual Python Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After you've got your ``env`` virtualenv installed, you may install
-:app:`Pyramid` itself using the following commands from within the
+`Pyramid` itself using the following commands from within the
 virtualenv (``env``) directory you created in the last step:
 
 .. code-block:: text
@@ -252,12 +243,9 @@ virtualenv (``env``) directory you created in the last step:
 The ``easy_install`` command will take longer than the previous ones to
 complete, as it downloads and installs a number of dependencies.
 
-.. index::
-   single: installing on Windows
-
 .. _installing_windows:
 
-Installing :app:`Pyramid` on a Windows System
+Installing `Pyramid` on a Windows System
 -------------------------------------------------
 
 #. Install, or find `Python 2.6
@@ -268,7 +256,7 @@ Installing :app:`Pyramid` on a Windows System
    pick the right download for Python 2.6 and install it using the
    same Python installation from the previous step.
 
-#. Install latest :term:`setuptools` distribution into the Python you
+#. Install latest `setuptools` distribution into the Python you
    obtained/installed/found in the step above: download `ez_setup.py
    <http://peak.telecommunity.com/dist/ez_setup.py>`_ and run it using
    the ``python`` interpreter of your Python 2.6 installation using a
@@ -300,44 +288,19 @@ Installing :app:`Pyramid` on a Windows System
    environment wired to use the virtualenv.
 
 #. Use ``easy_install`` pointed at the "current" index to get
-   :app:`Pyramid` and its direct dependencies installed:
+   `Pyramid` and its direct dependencies installed:
 
    .. code-block:: text
 
       c:\env> Scripts\easy_install pyramid
 
-.. index::
-   single: installing on Google App Engine
-
-Installing :app:`Pyramid` on Google App Engine
--------------------------------------------------
-
-:ref:`appengine_tutorial` documents the steps required to install a
-:app:`Pyramid` application on Google App Engine.
-
-Installing :app:`Pyramid` on Jython
---------------------------------------
-
-:app:`Pyramid` is known to work under :term:`Jython` version 2.5.1.
-Install :term:`Jython`, and then follow the installation steps for
-:app:`Pyramid` on your platform described in one of the sections
-entitled :ref:`installing_unix` or :ref:`installing_windows` above,
-replacing the ``python`` command with ``jython`` as necessary.  The
-steps are exactly the same except you should use the ``jython``
-command name instead of the ``python`` command name.
-
-One caveat exists to using :app:`Pyramid` under Jython: the :term:`Chameleon`
-templating engine does not work on Jython.  However, the :term:`Mako`
-templating system, which is also included with Pyramid, does work under
-Jython; use it instead.
-
 What Gets Installed
 -------------------
 
-When you ``easy_install`` :app:`Pyramid`, various Zope libraries,
+When you ``easy_install`` `Pyramid`, various Zope libraries,
 various Chameleon libraries, WebOb, Paste, PasteScript, and
 PasteDeploy libraries are installed.
 
-Additionally, as chronicled in :ref:`project_narr`, scaffolds will be registered,
-which make it easy to start a new :app:`Pyramid` project. 
+Additionally, some scaffolds will be registered,
+which make it easy to start a new `Pyramid` project. 
 
