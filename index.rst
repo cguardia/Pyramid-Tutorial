@@ -19,8 +19,15 @@ the available time, please help me by filling up the survey at the
 bottom of this page. This will allow me to tailor the content to better
 suit your needs and expectations.
 
+Feel free to use the comments
+-----------------------------
+
+If you want to comment about the tutorial or ask any question related to
+it, please use the comments at the bottom of the page. I'll do my best to
+answer all queries.
 
 Contents:
+=========
 
 .. toctree::
    :maxdepth: 2
