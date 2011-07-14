@@ -11,13 +11,17 @@ the day of the tutorial. For now, please read the requirements section and
 try to prepare your tutorial computer to avoid losing time setting up that
 day.
 
-Please answer the survey
-------------------------
+Please answer the survey - Win Pyramid book
+-------------------------------------------
 
 Three hours is a short time for a tutorial. To take maximum advantage of
 the available time, please help me by filling up the survey at the 
 bottom of this page. This will allow me to tailor the content to better
 suit your needs and expectations.
+
+To make it worth your while, 3 pyramid books will be given away to
+randomly chosen survey responders who choose to include their email in the
+survey answers.
 
 Feel free to use the comments
 -----------------------------
@@ -34,10 +38,4 @@ Contents:
 
    prerequisites.rst
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
