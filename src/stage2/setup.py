@@ -14,6 +14,7 @@ requires = [
     'repoze.tm2>=1.0b1', # default_commit_veto
     'zope.sqlalchemy',
     'repoze.timeago',
+    'cryptacular',
     'WebError',
     ]
 

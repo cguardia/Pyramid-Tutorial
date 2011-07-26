@@ -67,8 +67,10 @@ input[type=submit]{background-color:#ddd;font-weight:bold;}
 /*Opera Fix*/
 body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
 #feedlist {margin-top: 15px;}
-.feeditem {margin: 8px; padding: 8px; border-bottom: 1px solid;}
+.feeditem {margin: 8px; padding: 8px; border-top: 1px solid;}
 .thumbnail {float:left; margin-right: 20px;}
 .feedtext {text-align: left;}
 .posttime {font-size: 10px;clear: both;}
 .username {font-size: 10px;}
+#message {color: red;}
+.fullname, .logout {font-size: 10px;}
