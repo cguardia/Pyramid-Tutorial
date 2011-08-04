@@ -69,9 +69,11 @@ body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
 #feedlist {margin-top: 15px;}
 .feeditem {margin: 8px; padding: 8px; border-top: 1px solid;}
 .thumbnail {float:left; margin-right: 20px;}
+.thumbnail img {float:left;}
 .feedtext {text-align: left;}
 .posttime {font-size: 10px;clear: both;}
 .username {font-size: 10px;}
 #message {color: red;}
 .fullname {font-size: 10px;}
 .logout {float: right;}
+#chirp {width:490px;}

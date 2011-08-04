@@ -35,16 +35,15 @@
       <div class="bottom">
         <div id="left" class="align-right">
           <form action="${app_url}" method="POST">
-            <textarea name="chirp" id="chirp" rows="3" cols="68"></textarea>
+            <textarea name="chirp" id="chirp" rows="3" cols="60"></textarea>
             <input type="submit" value="chirp" />
           </form>
           <div id="feedlist">
             <div class="feeditem" tal:repeat="chirp chirps">
               <div class="thumbnail">
-                <img src="${static_url('birdie:static/avatar.jpg')}" />
-                <div class="username">
-                   <a href="${app_url}/${chirp.author.userid}">${chirp.author.userid}</a>
-                </div>
+                <a href="${app_url}/${chirp.author.userid}" title="${chirp.author.userid}">
+                  <img src="${static_url('birdie:static/avatar.jpg')}" />
+                </a>
               </div>
               <div class="feedtext">
                 <div class="chirp">
@@ -52,8 +51,7 @@
                 </div>
               </div>
               <div class="posttime">
-                <abbr class="timeago"
-                  >${elapsed(chirp.timestamp)}</abbr>
+                   <abbr class="timeago">${elapsed(chirp.timestamp)}</abbr>
               </div>
             </div>
           </div>
