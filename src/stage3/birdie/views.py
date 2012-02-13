@@ -148,9 +148,9 @@ def user_chirps(request):
     matchdict = request.matchdict
     other_userid = matchdict.get('userid')
     other_user = dbsession.query(User).filter_by(userid=other_userid).first()
+    url = route_url('users', request, userid=other_userid)
     if other_user is None:
         return HTTPNotFound(location=url)
-    url = route_url('users', request, userid=other_userid)
     chirps = dbsession.query(Chirp).filter(Chirp.author==other_user)
     chirps = chirps.order_by(Chirp.timestamp.desc()).limit(30)
     follows = dbsession.query(Follower).filter(Follower.follower==other_user.id)
@@ -186,7 +186,6 @@ def follow(request):
     matchdict = request.matchdict
     other_userid = matchdict.get('userid')
     other_user = dbsession.query(User).filter_by(userid=other_userid).first()
-    url = route_url('users', request, userid=other_userid)
     follower = user.id
     follows = other_user.id
     new_follower = Follower(follower, follows)
@@ -203,10 +202,8 @@ def unfollow(request):
     matchdict = request.matchdict
     other_userid = matchdict.get('userid')
     other_user = dbsession.query(User).filter_by(userid=other_userid).first()
-    url = route_url('users', request, userid=other_userid)
     follower = user.id
     follows = other_user.id
     dbsession.query(Follower).filter(Follower.follower==follower).filter(Follower.follows==follows).delete()
     return HTTPFound(location = '/')
-    return HTTPFound(location = user_url)
 
