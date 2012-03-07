@@ -1,5 +1,4 @@
 import unittest
-from pyramid.config import Configurator
 from pyramid import testing
 
 def _initTestingDB():

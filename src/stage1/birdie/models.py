@@ -1,16 +1,12 @@
-import transaction
-
 from sqlalchemy import Column
 from sqlalchemy import TIMESTAMP
 from sqlalchemy import Unicode
 from sqlalchemy import Integer
 
-from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.declarative import declarative_base
 
 from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm import column_property
 
 from zope.sqlalchemy import ZopeTransactionExtension
 

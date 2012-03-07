@@ -1,10 +1,7 @@
-import transaction
-
 from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import Unicode
 
-from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.declarative import declarative_base
 
 from sqlalchemy.orm import scoped_session
