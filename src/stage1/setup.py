@@ -14,6 +14,7 @@ requires = [
     'zope.sqlalchemy',
     'repoze.timeago',
     'waitress',
+    'pyramid_chameleon',
     ]
 
 setup(name='birdie',

@@ -15,6 +15,7 @@ requires = [
     'repoze.timeago',
     'cryptacular',
     'waitress',
+    'pyramid_chameleon',
     ]
 
 setup(name='birdie',
