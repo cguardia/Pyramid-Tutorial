@@ -5,8 +5,8 @@ Stage 1
 =======
 
 In the previous step, created a default project from the Pyramid ``alchemy``
-scaffold. Next you will add a database model, create two views, and use
-Chameleon for your templates.
+scaffold. Next you will add a database model, create a route and two views, and
+use Chameleon for your templates.
 
 
 Add a database model
@@ -43,26 +43,48 @@ Now let's initialize the database by running the script from the command line.
     $ $VENV/bin/initialize_MyBirdie_db development.ini
 
 
-Create views
-------------
+Create route and views
+----------------------
+
+Let's configure our app. Open and edit ``mybirdie/__init__.py`` as follows.
+
+
 
 Now let's make two views. The first one will be for displaying all the chirps,
-and the second will be for posting a new chirp. Templates use chameleon.
+and the second will be for posting a new chirp.
+
+Open ``mybirdie/views.py`` and completely replace its contents with the
+following.
 
 
-Copied from Stage 0 - OK to delete
-----------------------------------
 
-At the command line, make sure your current working directory is ``birdie``.
-Then issue the following command.
+In the first few lines, we import classes we need in the views.
 
-.. code-block:: bash
+The view ``birdie_view`` accepts a Pyramid ``request`` object. It initializes a
+database session, then queries the database for chirps where the author is
+"anonymous", sorts them in order of most recent first, limiting to 30 records.
+The result set is returned in a dict with the key ``chirps``, along with a few
+other items.
 
-    $ $VENV/bin/pcreate -s alchemy MyBirdie
+Next for creating a chirp, we use the view ``birdie_post``, which also accepts
+a Pyramid ``request`` object and initializes a database session. It then gets
+the POST parameter ``chirp``, assigning its value to the variable of the same
+name. We assign values for both ``author`` and ``timestamp``, and create a new
+``Chirp`` object from the three variables. Then the new chirp object is added
+to the database as a new record. The rest of the view is exactly the same as
+our previous view, returning the 30 most recent chirps.
 
-A new project is created at ``birdie/MyBirdie``. The Pyramid scaffold
-``alchemy`` generated a directory containing files that are commonly used in a
-Pyramid project.
+
+Create templates using Chameleon
+--------------------------------
+
+Next we need to render the response through a template that uses Chameleon. You
+can rename the default template file from the scaffold from
+``mybirdie/templates/mytemplate.pt`` to ``mybirdie/templates/birdie.pt``, then
+edit it as indicated.
+
+Run the app
+-----------
 
 Let's verify that the default project works. Issue the following commands.
 
