@@ -10,3 +10,4 @@ Birdie is a tutorial for building a simple Twitter clone using Pyramid.
 
     requirements
     stage0
+    stage1
